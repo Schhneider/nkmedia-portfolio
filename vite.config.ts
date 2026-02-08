@@ -22,6 +22,6 @@ export default defineConfig({
         jsx: 'automatic',
     },
     build: {
-        outDir: 'public/build',
+        outDir: 'dist',
     },
 });
