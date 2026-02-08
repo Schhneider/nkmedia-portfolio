@@ -1,0 +1,71 @@
+{
+  "_compiler-runtime-DArXC8q1.js": {
+    "file": "assets/compiler-runtime-DArXC8q1.js",
+    "name": "compiler-runtime",
+    "imports": [
+      "resources/js/app.tsx"
+    ]
+  },
+  "resources/css/app.css": {
+    "file": "assets/app-db6cQiny.css",
+    "src": "resources/css/app.css",
+    "isEntry": true,
+    "name": "app",
+    "names": [
+      "app.css"
+    ]
+  },
+  "resources/js/app.tsx": {
+    "file": "assets/app-BYGw7Fzz.js",
+    "name": "app",
+    "src": "resources/js/app.tsx",
+    "isEntry": true,
+    "dynamicImports": [
+      "resources/js/pages/projectItems.tsx",
+      "resources/js/pages/projects.tsx",
+      "resources/js/pages/welcome.tsx"
+    ],
+    "css": [
+      "assets/app-db6cQiny.css"
+    ]
+  },
+  "resources/js/pages/projectItems.tsx": {
+    "file": "assets/projectItems-BdMRTgoW.js",
+    "name": "projectItems",
+    "src": "resources/js/pages/projectItems.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.tsx",
+      "_compiler-runtime-DArXC8q1.js"
+    ],
+    "css": [
+      "assets/app-db6cQiny.css"
+    ]
+  },
+  "resources/js/pages/projects.tsx": {
+    "file": "assets/projects-Minzh9OX.js",
+    "name": "projects",
+    "src": "resources/js/pages/projects.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.tsx",
+      "_compiler-runtime-DArXC8q1.js"
+    ],
+    "css": [
+      "assets/app-db6cQiny.css"
+    ]
+  },
+  "resources/js/pages/welcome.tsx": {
+    "file": "assets/welcome-BPwSwbip.js",
+    "name": "welcome",
+    "src": "resources/js/pages/welcome.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.tsx",
+      "_compiler-runtime-DArXC8q1.js"
+    ],
+    "css": [
+      "assets/app-db6cQiny.css"
+    ]
+  }
+}
