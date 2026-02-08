@@ -47,14 +47,18 @@ export default function Welcome() {
 
         const openModal = (e: Event) => {
             e.preventDefault();
-            modal?.style && (modal.style.display = "block");
+            if (modal?.style) {
+                modal.style.display = "block";
+            }
         };
 
         const closeModal = () => {
-            modal?.style && (modal.style.display = "none");
+            if (modal?.style) {
+                modal.style.display = "none";
+            }
         };
 
-        const hideMoreButtonForMobile = (e: Event) => {
+        const hideMoreButtonForMobile = () => {
             if (!moreButton) return;
             moreButton?.classList.toggle("hide-faster");
         };
