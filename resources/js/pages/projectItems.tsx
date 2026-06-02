@@ -15,6 +15,15 @@ export default function ProjectItems({ title, images, videos }) {
                 </div>
             </div>
             <div className="row">
+                <div className="top-nav-mobile top-nav-padding">
+                    <div>
+                        <nav>
+                            <a href="/projects" className="white-text-second">Atpakaļ</a>
+                        </nav> 
+                    </div>
+                </div>
+            </div>
+            <div className="row">
                 <span className="white-text-main">{title}</span>
             </div>
             <div className="row">

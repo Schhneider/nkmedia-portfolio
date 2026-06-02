@@ -27,7 +27,9 @@ export default function Welcome() {
 
         if (!nextSectionRef.current) return;
 
-        const offset = 300;
+        const windowWidth = (1920 / window.innerWidth) + 0.5;
+
+        const offset = 300 / windowWidth;
         const elementTop = nextSectionRef.current.getBoundingClientRect().top;
         const scrollTop = window.pageYOffset;
 
@@ -170,6 +172,8 @@ export default function Welcome() {
             <div className="row">
                 <a href="/projects" className="white-text-main"><u>MORE PROJECTS</u></a>
             </div>
+
+            <div className="row"></div>
 
             <div className="row">
                 <div>

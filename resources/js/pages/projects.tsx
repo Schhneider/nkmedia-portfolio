@@ -1,6 +1,21 @@
 import { Head } from '@inertiajs/react';
+import { useEffect, useState } from "react";
 
 export default function Projects() {
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkScreen = () => {
+            console.log("test");
+            setIsMobile(window.innerWidth <= 768); // mobile breakpoint
+        };
+
+        checkScreen();
+        window.addEventListener("resize", checkScreen);
+
+        return () => window.removeEventListener("resize", checkScreen);
+    }, []);
+
     return (
         <>
             <Head title="NKmedia" />
@@ -12,6 +27,15 @@ export default function Projects() {
                 </div>
                 <div>
                     <h3>soctikli</h3>
+                </div>
+            </div>
+            <div className="row">
+                <div className="top-nav-mobile top-nav-padding">
+                    <div>
+                        <nav>
+                            <a href="/" className="white-text-second">Atpakaļ</a>
+                        </nav> 
+                    </div>
                 </div>
             </div>
             <div className="row">
@@ -29,10 +53,15 @@ export default function Projects() {
                                 loop
                                 playsInline
                                 preload="metadata"
-                                onMouseEnter={(e) => e.currentTarget.play()}
+                                autoPlay={isMobile}
+                                onMouseEnter={(e) => {
+                                    if (!isMobile) e.currentTarget.play();
+                                }}
                                 onMouseLeave={(e) => {
-                                e.currentTarget.pause();
-                                e.currentTarget.currentTime = 0;
+                                    if (!isMobile) {
+                                        e.currentTarget.pause();
+                                        e.currentTarget.currentTime = 0;
+                                    }
                                 }}
                             />
                         </div>
@@ -49,10 +78,15 @@ export default function Projects() {
                                 loop
                                 playsInline
                                 preload="metadata"
-                                onMouseEnter={(e) => e.currentTarget.play()}
+                                autoPlay={isMobile}
+                                onMouseEnter={(e) => {
+                                    if (!isMobile) e.currentTarget.play();
+                                }}
                                 onMouseLeave={(e) => {
-                                e.currentTarget.pause();
-                                e.currentTarget.currentTime = 0;
+                                    if (!isMobile) {
+                                        e.currentTarget.pause();
+                                        e.currentTarget.currentTime = 0;
+                                    }
                                 }}
                             />
                         </div>
@@ -69,10 +103,15 @@ export default function Projects() {
                                 loop
                                 playsInline
                                 preload="metadata"
-                                onMouseEnter={(e) => e.currentTarget.play()}
+                                autoPlay={isMobile}
+                                onMouseEnter={(e) => {
+                                    if (!isMobile) e.currentTarget.play();
+                                }}
                                 onMouseLeave={(e) => {
-                                e.currentTarget.pause();
-                                e.currentTarget.currentTime = 0;
+                                    if (!isMobile) {
+                                        e.currentTarget.pause();
+                                        e.currentTarget.currentTime = 0;
+                                    }
                                 }}
                             />
                         </div>
