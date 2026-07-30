@@ -1,5 +1,5 @@
-import { Head } from '@inertiajs/react';
 import { useEffect, useRef, useState } from 'react';
+import { asset } from '../lib/assets';
 
 export default function Welcome() {
     const [hidden, setHidden] = useState(false);
@@ -18,6 +18,10 @@ export default function Welcome() {
 
         window.addEventListener('scroll', onScroll);
         return () => window.removeEventListener('scroll', onScroll);
+    }, []);
+
+    useEffect(() => {
+        document.title = 'NKmedia';
     }, []);
 
     const nextSectionRef = useRef<null | HTMLDivElement>(null);
@@ -87,10 +91,9 @@ export default function Welcome() {
 
     return (
         <>
-            <Head title="NKmedia" />
             <div id="contact-modal" className="modal">
                 <div className="modal-content">
-                    <img className="modal-logo unselectable" src="/images/NK-media-white 1.png" alt="logo" />
+                    <img className="modal-logo unselectable" src={asset('images/NK-Media-white 1.png')} alt="logo" />
                     <p className="white-text-main unselectable">+371 talrunis</p>
                     <p className="white-text-main unselectable">epasts</p>
                 </div>
@@ -99,7 +102,7 @@ export default function Welcome() {
                 <div className="top-nav">
                     <div>
                         <nav>
-                            <a href="/projects" className="white-text-main">Projects</a>
+                            <a href="#/projects" className="white-text-main">Projects</a>
                             <a href="#" className="white-text-main">About</a>
                             <a id="contact-button" href="#" className="white-text-main">Contacts</a>
                         </nav> 
@@ -119,7 +122,7 @@ export default function Welcome() {
                         </label>
                     
                         <nav className="menu1">
-                            <a className="white-text-main link1" href="/projects">Projects</a>
+                            <a className="white-text-main link1" href="#/projects">Projects</a>
                             <a className="white-text-main link1" href="">About</a>
                             <a className="white-text-main link1 kbutton-nav" href="#" id="contact-button-mobile">Contacts</a>
                         </nav>
@@ -129,15 +132,15 @@ export default function Welcome() {
                 <div className={`image-container ${hidden ? 'hide' : ''}`}>
                     <video
                         className="video-preview"
-                        src="/images/nkmedialv-web-bg-1.mp4"
-                        poster="/images/video_preview.png" // optional fallback
+                        src={asset('images/nkmedialv-web-bg-1.mp4')}
+                        poster={asset('images/video_preview.png')}
                         muted
                         loop
                         playsInline
                         preload="metadata"
                         autoPlay
                         />
-                    <img className="image-overlay-logo" src="/images/NK-media-white 1.png" alt="logo" />
+                    <img className="image-overlay-logo" src={asset('images/NK-Media-white 1.png')} alt="logo" />
                 </div>
             </div>
 
@@ -146,31 +149,31 @@ export default function Welcome() {
                     <p className="moreButton white-text-main">vairāk</p>
                 </div>
                 <div>
-                    <img className="buttonDown" src="/images/arrow_down.png" alt="arrow" />
+                    <img className="buttonDown" src={asset('images/arrow_down.png')} alt="arrow" />
                 </div>
             </a>
 
             <div ref={nextSectionRef} className="row">
                 <div className="projectPreview-container">
                     <div className="projectPreview-main-image">
-                        <img src="/images/main-project-image.jpg" alt="project" />
+                        <img src={asset('images/main-project-image.jpg')} alt="project" />
                     </div>
                     <div className="projectPreview-extra-images">
-                        <img src="/images/extra-project-image.jpg" alt="project" />
-                        <img src="/images/extra-project-image2.jpg" alt="project" />
+                        <img src={asset('images/extra-project-image.jpg')} alt="project" />
+                        <img src={asset('images/extra-project-image2.jpg')} alt="project" />
                     </div>
                 </div>
                 <div className="projectPreview-container-mobile">
                     <div className="projectPreview-extra-images-mobile">
-                        <img src="/images/main-project-image.jpg" alt="project" />
-                        <img src="/images/extra-project-image.jpg" alt="project" />
-                        <img src="/images/extra-project-image2.jpg" alt="project" />
+                        <img src={asset('images/main-project-image.jpg')} alt="project" />
+                        <img src={asset('images/extra-project-image.jpg')} alt="project" />
+                        <img src={asset('images/extra-project-image2.jpg')} alt="project" />
                     </div>
                 </div>
             </div>
 
             <div className="row">
-                <a href="/projects" className="white-text-main"><u>MORE PROJECTS</u></a>
+                <a href="#/projects" className="white-text-main"><u>MORE PROJECTS</u></a>
             </div>
 
             <div className="row"></div>
@@ -178,7 +181,7 @@ export default function Welcome() {
             <div className="row">
                 <div>
                     <div className="modal-content-footer">
-                        <img className="modal-logo unselectable" src="/images/NK-media-white 1.png" alt="logo" />
+                        <img className="modal-logo unselectable" src={asset('images/NK-Media-white 1.png')} alt="logo" />
                         <p className="white-text-main unselectable">+371 talrunis</p>
                         <p className="white-text-main unselectable">epasts</p>
                     </div>

@@ -1,12 +1,13 @@
-import { Head } from '@inertiajs/react';
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
+import { asset } from '../lib/assets';
 
 export default function Projects() {
     const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
+        document.title = 'NKmedia';
+
         const checkScreen = () => {
-            console.log("test");
             setIsMobile(window.innerWidth <= 768); // mobile breakpoint
         };
 
@@ -18,12 +19,11 @@ export default function Projects() {
 
     return (
         <>
-            <Head title="NKmedia" />
             <div className="top-nav">
                 <div>
                     <nav>
-                        <a href="/" className="white-text-main">Atpakaļ</a>
-                    </nav> 
+                        <a href="#/" className="white-text-main">Atpakaļ</a>
+                    </nav>
                 </div>
                 <div>
                     <h3>soctikli</h3>
@@ -33,8 +33,8 @@ export default function Projects() {
                 <div className="top-nav-mobile top-nav-padding">
                     <div>
                         <nav>
-                            <a href="/" className="white-text-second">Atpakaļ</a>
-                        </nav> 
+                            <a href="#/" className="white-text-second">Atpakaļ</a>
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -42,13 +42,13 @@ export default function Projects() {
                 <a href="#" className="white-text-main">PROJECTS</a>
             </div>
             <div className="project-slides">
-                <a href="/projects/automotive">
+                <a href="#/projects/automotive">
                     <div className="row-no-padding">
                         <div className="image-container project-preview-container">
                             <p className="image-overlay-text white-text-main">AUTOMOTIVE</p>
                             <video
                                 className="project-preview"
-                                src="/images/nkmedialv-web-bg-1.mp4"
+                                src={asset('images/nkmedialv-web-bg-1.mp4')}
                                 muted
                                 loop
                                 playsInline
@@ -67,13 +67,13 @@ export default function Projects() {
                         </div>
                     </div>
                 </a>
-                <a href="/projects/commercials">
+                <a href="#/projects/commercials">
                     <div className="row-no-padding">
                         <div className="image-container project-preview-container">
                             <p className="image-overlay-text white-text-main">WEDDINGS</p>
                             <video
                                 className="project-preview"
-                                src="/images/nkmedialv-web-bg-1.mp4"
+                                src={asset('images/nkmedialv-web-bg-1.mp4')}
                                 muted
                                 loop
                                 playsInline
@@ -92,13 +92,13 @@ export default function Projects() {
                         </div>
                     </div>
                 </a>
-                <a href="/projects/weddings">
+                <a href="#/projects/weddings">
                     <div className="row-no-padding">
                         <div className="image-container project-preview-container">
                             <p className="image-overlay-text white-text-main">COMMERCIALS</p>
                             <video
                                 className="project-preview"
-                                src="/images/nkmedialv-web-bg-1.mp4"
+                                src={asset('images/nkmedialv-web-bg-1.mp4')}
                                 muted
                                 loop
                                 playsInline
