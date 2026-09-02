@@ -3,6 +3,7 @@
     "private": true,
     "type": "module",
     "scripts": {
+        "prebuild": "node scripts/generate-media-manifest.mjs",
         "build": "vite build",
         "dev": "vite",
         "format": "prettier --write resources/",

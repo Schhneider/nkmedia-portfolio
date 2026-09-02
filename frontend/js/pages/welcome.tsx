@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { asset } from '../lib/assets';
+import { frontPageMedia } from '../config';
 
 export default function Welcome() {
     const [hidden, setHidden] = useState(false);
@@ -132,7 +133,7 @@ export default function Welcome() {
                 <div className={`image-container ${hidden ? 'hide' : ''}`}>
                     <video
                         className="video-preview"
-                        src={asset('images/nkmedialv-web-bg-1.mp4')}
+                        src={asset(frontPageMedia.backgroundVideo)}
                         poster={asset('images/video_preview.png')}
                         muted
                         loop
@@ -156,18 +157,18 @@ export default function Welcome() {
             <div ref={nextSectionRef} className="row">
                 <div className="projectPreview-container">
                     <div className="projectPreview-main-image">
-                        <img src={asset('images/main-project-image.jpg')} alt="project" />
+                        <img src={asset(frontPageMedia.preview.main)} alt="project" />
                     </div>
                     <div className="projectPreview-extra-images">
-                        <img src={asset('images/extra-project-image.jpg')} alt="project" />
-                        <img src={asset('images/extra-project-image2.jpg')} alt="project" />
+                        <img src={asset(frontPageMedia.preview.extras[0])} alt="project" />
+                        <img src={asset(frontPageMedia.preview.extras[1])} alt="project" />
                     </div>
                 </div>
                 <div className="projectPreview-container-mobile">
                     <div className="projectPreview-extra-images-mobile">
-                        <img src={asset('images/main-project-image.jpg')} alt="project" />
-                        <img src={asset('images/extra-project-image.jpg')} alt="project" />
-                        <img src={asset('images/extra-project-image2.jpg')} alt="project" />
+                        <img src={asset(frontPageMedia.preview.main)} alt="project" />
+                        <img src={asset(frontPageMedia.preview.extras[0])} alt="project" />
+                        <img src={asset(frontPageMedia.preview.extras[1])} alt="project" />
                     </div>
                 </div>
             </div>

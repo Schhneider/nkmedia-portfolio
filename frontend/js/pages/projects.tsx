@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { asset } from '../lib/assets';
+import { frontPageMedia } from '../config';
 
 export default function Projects() {
     const [isMobile, setIsMobile] = useState(false);
@@ -48,7 +49,7 @@ export default function Projects() {
                             <p className="image-overlay-text white-text-main">AUTOMOTIVE</p>
                             <video
                                 className="project-preview"
-                                src={asset('images/nkmedialv-web-bg-1.mp4')}
+                                src={asset(frontPageMedia.projectPreviewVideos.automotive)}
                                 muted
                                 loop
                                 playsInline
@@ -73,7 +74,7 @@ export default function Projects() {
                             <p className="image-overlay-text white-text-main">WEDDINGS</p>
                             <video
                                 className="project-preview"
-                                src={asset('images/nkmedialv-web-bg-1.mp4')}
+                                src={asset(frontPageMedia.projectPreviewVideos.commercials)}
                                 muted
                                 loop
                                 playsInline
@@ -98,7 +99,7 @@ export default function Projects() {
                             <p className="image-overlay-text white-text-main">COMMERCIALS</p>
                             <video
                                 className="project-preview"
-                                src={asset('images/nkmedialv-web-bg-1.mp4')}
+                                src={asset(frontPageMedia.projectPreviewVideos.weddings)}
                                 muted
                                 loop
                                 playsInline
