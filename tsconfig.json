@@ -109,13 +109,13 @@
         "skipLibCheck": true /* Skip type checking all .d.ts files. */,
         "baseUrl": ".",
         "paths": {
-            "@/*": ["./resources/js/*"]
+            "@/*": ["frontend/js/*"]
         },
         "jsx": "react-jsx"
     },
     "include": [
-        "resources/js/**/*.ts",
-        "resources/js/**/*.d.ts",
-        "resources/js/**/*.tsx",
+        "frontend/js/**/*.ts",
+        "frontend/js/**/*.d.ts",
+        "frontend/js/**/*.tsx",
     ]
 }
